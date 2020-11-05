@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>200 Success/Сайт успешно запущен</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="//www.hostland.ru/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//static.hostland.ru/welcome/css/bootstrap-4.min.css" />
+    <style>
+      body {
+        font: 0.8em Arial, Helvetica, sans-serif;
+        position: relative;
+        z-index: 0;
+        margin: 0;
+        padding: 0 0 1em 0;
+        color: #000;
+        background: #fff;
+        font-size: 16px;
+      }
+      p {
+        line-height: 20px;
+      }
+      .hostname {
+        word-wrap: break-word;
+      }
+      .status-number {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-left: 15px;
+        background-color: #999;
+        color: #fff;
+        font-size: 30px;
+        border-radius: 3px;
+      }
+      .status-text {
+        display: block;
+        margin-left: 15px;
+        margin-top: 5px;
+        font-size: 16px;
+      }
+      .logo-container {
+        display: inline-flex;
+        width: 100%;
+        justify-content: flex-start;
+        position: relative;
+        left: -15px;
+      }
+      .logo-container__image {
+        width: 280px;
+        margin-bottom: 15px;
+      }
+      .tech-header {
+          font-size: 1.8em;
+          color: #777777;
+          line-height: 30px;
+      }
+      .decimal-list {
+        list-style-type: decimal;
+        padding-left: 15px;
+      }
+      .decimal-list__item {
+        margin-bottom: 5px;
+      }
+      .unordered-list {
+        padding-left: 0;
+        list-style-type: none;
+      }
+      .unordered-list__item {
+        margin-bottom: 4px;
+      }
+      .unordered-list__item:before {
+        color: #00aaff;
+        font-size: 18px;
+        content: '\2022';
+        padding-right: 7px;
+      }
+      .unordered-list__link {
+        border-bottom: 2px dotted #00aaff;
+      }
+      .unordered-list__link:hover {
+        border-bottom: none;
+        text-decoration: none;
+      }
+      .br-line {
+        height: 5px;
+        margin: 20px 0 15px;
+        background-color: rgb(135, 179, 218);
+      }
+      /* === === === */
+      .b-search {
+        font-size: 100%;
+        margin: 0;
+      }
+      .b-search__table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .b-search__under {
+        padding: 0;
+        vertical-align: top;
+      }
+      .b-search__input,
+      .b-search__button {
+        padding: 0;
+        vertical-align: middle;
+        border-collapse: collapse;
+      }
+      .b-search__submit {
+        font: 100% Arial, sans-serif;
+        margin: 0;
+      }
+      .b-search__under {
+        height: 18px;
+      }
+      .b-search__under .b-suggest {
+        margin-right: 4.85em;
+      }
+      .b-search__input .b-input__text:-moz-first-node {
+        height: 1.86em;
+      }
+      .b-search__wrap-input,
+      .b-search__wrap-button {
+        display: block;
+      }
+      .b-search__under_col_right {
+        width: 1%;
+        padding: 3px 0 0 0.5em;
+      }
+      .b-search__empty {
+        padding: 0;
+      }
+      .b-search__under .b-suggest {
+        margin-right: 0;
+      }
+      .b-search__input {
+        width: 100%;
+      }
+      .b-search__input .b-form-input {
+        position: relative;
+        min-width: 3.2em;
+      }
+      .b-search__button {
+        padding-left: 6px;
+        vertical-align: middle;
+      }
+      .b-form-input {
+        display: block;
+      }
+      .b-form-input__box {
+        display: block;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 0.3em;
+        border: 1px solid;
+        border-color: #a3a3a3 #c6c6c6 #e5e5e5;
+        background: #fff;
+        -webkit-box-shadow: inset 0 1px 1px #cfcfcf;
+        -moz-box-shadow: inset 0 1px 1px #cfcfcf;
+        box-shadow: inset 0 1px 1px #cfcfcf;
+      }
+      .b-form-input__input {
+        font: 100% Arial, sans-serif;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        background: none;
+      }
+      .b-form-input_focused_yes .b-form-input__box {
+        -webkit-box-shadow: inset 0 1px 1px #cfcfcf, 0 0 1px #ffd94f,
+          0 0 1px #ffd94f, 0 0 2px #ffd94f;
+        -moz-box-shadow: inset 0 1px 1px #cfcfcf, 0 0 1px #ffd94f,
+          0 0 1px #ffd94f, 0 0 2px #ffd94f;
+        box-shadow: inset 0 1px 1px #cfcfcf, 0 0 1px #ffd94f, 0 0 1px #ffd94f,
+          0 0 2px #ffd94f;
+      }
+      .b-form-input_size_16 .b-form-input__hint,
+      .b-form-input_size_16 .b-form-input__input {
+        font-size: 16px;
+      }
+      .b-form-input_size_16 .b-form-input__box {
+        height: 26px;
+      }
+      @media all and (max-width: 767px) {
+        .logo-container {
+          justify-content: center;
+        }
+      }
+      @media all and (max-width: 570px) {
+        .status-container {
+          display: flex;
+          justify-content: center
+        }
+        .status-text {
+          display: flex;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body class="b-page b-page_type_boring">
+    <p></p>
+    <center>
+        <p>Гиперссылки:</p>
+        <p><a href="figures.html">Фигуры</a></p>
+        <p><a href="space.html">Космос</a></p>
+        <p><a href="plane.html">Плоскость</a></p>
+        <p><a href="rotation.html">Вращение</a></p>
+        <p><a href="jug.html">Кувшин</a></p>
+        <p><a href="sprite.html">Спрайт</a></p>
+    </center>
+  </body>
+</html>
