@@ -69,7 +69,7 @@ scene.add( light );
 // scene objects
 
 var textureLoader = new THREE.TextureLoader();
-var texture = textureLoader.load( 'textures/kote.png' );
+var texture = textureLoader.load( 'textures/cat.jpg' );
 var material = new THREE.MeshBasicMaterial( { map: texture } );
 
 var geometry = new THREE.BoxGeometry ( 200, 200, 200 );		
@@ -77,7 +77,7 @@ var Cube = new THREE.Mesh( geometry, material );
 Cube.position.set(0, 100, 0);
 scene.add( Cube );
 
-var texture = textureLoader.load( 'textures/checkerboard.png' );
+var texture = textureLoader.load( 'textures/grid.jpg' );
 
 texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 texture.repeat.set( 4, 4 );
